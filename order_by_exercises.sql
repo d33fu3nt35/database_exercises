@@ -14,7 +14,7 @@ WHERE gender = 'M'
 SELECT first_name, last_name
 FROM employees
 WHERE last_name LIKE 'E%'
-OR last_name LIKE '%E';
+      OR last_name LIKE '%E';
 
 # Duplicate the previous query and update it to find all employees whose last name starts and ends with 'E' — 899 rows.
 SELECT first_name, last_name
@@ -31,7 +31,7 @@ WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31';
 SELECT hire_date, birth_date, first_name, last_name
 FROM employees
 WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31'
-AND birth_date LIKE '%12-25%';
+      AND birth_date LIKE '%12-25%';
 
 # Employees born on Christmas — 842 rows.
 SELECT *
@@ -47,20 +47,20 @@ WHERE last_name LIKE '%Q%';
 SELECT emp_no, first_name, last_name
 FROM employees
 WHERE last_name LIKE '%Q%'
-AND last_name NOT LIKE '%QU%';
+      AND last_name NOT LIKE '%QU%';
 
 # Select all employees with the first name of 'Carl' or 'Karl'.
 SELECT *
 FROM employees
 WHERE first_name = 'Carl'
-OR first_name = 'Karl';
+      OR first_name = 'Karl';
 
 SELECT emp_no, first_name, last_name
 FROM employees
 WHERE emp_no < 20000
       AND
-        last_name IN ('Herber','Baek')
-  OR first_name = 'Shridhar';
+      last_name IN ('Herber','Baek')
+      OR first_name = 'Shridhar';
 
 SELECT emp_no, first_name, last_name
 FROM employees
@@ -68,7 +68,7 @@ WHERE emp_no < 20000
       AND (
         last_name IN ('Herber', 'Baek')
         OR first_name = 'Shridhar'
-);
+      );
 
 SELECT first_name, last_name
 FROM employees
