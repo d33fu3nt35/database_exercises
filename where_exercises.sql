@@ -23,6 +23,7 @@ FROM employees
 WHERE last_name LIKE 'E%'
       AND last_name LIKE '%E';
 
+# Employees hired in the 90s — 135,214 rows.
 SELECT hire_date, first_name, last_name
 FROM employees
 WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31';
@@ -33,10 +34,12 @@ FROM employees
 WHERE hire_date BETWEEN '1990-01-01' AND '1999-12-31'
 AND birth_date LIKE '%12-25%';
 
+# Employees born on Christmas — 842 rows.
 SELECT *
 FROM employees
 WHERE birth_date LIKE '%12-25%';
 
+# Employees with a 'q' in their last name — 1,873 rows.
 SELECT emp_no, first_name, last_name
 FROM employees
 WHERE last_name LIKE '%Q%';
